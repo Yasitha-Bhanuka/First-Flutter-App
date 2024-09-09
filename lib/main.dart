@@ -32,9 +32,24 @@ class MyApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("1 children"),
-                Text("2 children"),
-                Text("3 children"),
+                Text("Welcome to Hello Futter App!"),
+                Column(
+                  children: [
+                    Text("Image"),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text("This app is developed by Yasitha!"),
+                  ],
+                ),
+                Container(
+                    padding: EdgeInsets.all(10),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Text("3 children")),
               ],
             ),
           )),
