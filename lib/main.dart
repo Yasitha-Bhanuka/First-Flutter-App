@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloflutter/child_one.dart';
-import 'package:helloflutter/child_second.dart';
-import 'package:helloflutter/child_third.dart';
+import 'package:helloflutter/the_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,21 +22,7 @@ class MyApp extends StatelessWidget {
             ),
             backgroundColor: Colors.blue[900],
           ),
-          body: Container(
-              padding: const EdgeInsets.all(30),
-              height: double.infinity,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.blue[100],
-              ),
-              child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    ChildOne(),
-                    ChildSecond(),
-                    ChildThird(),
-                  ]))),
+          body: const TheContainer()),
     );
   }
 }

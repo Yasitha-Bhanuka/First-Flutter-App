@@ -9,17 +9,17 @@ class ChildThird extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.black,
+          color: Colors.blueGrey[900],
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
           children: [
             Image.asset(
               "assets/images/profile_icon.png",
-              width: 50,
+              width: 60,
             ),
             const SizedBox(
-              width: 15,
+              width: 18,
             ),
             const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,12 +29,18 @@ class ChildThird extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
+                SizedBox(
+                  height: 3,
+                ),
                 Text(
                   "Flutter Developer",
                   style: TextStyle(color: Colors.white),
                 ),
+                SizedBox(
+                  height: 2,
+                ),
                 Text(
-                  "www.yasitha.com",
+                  "www.areayasithadev.com",
                   style: TextStyle(color: Colors.white),
                 ),
               ],

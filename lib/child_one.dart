@@ -6,7 +6,7 @@ class ChildOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      "Welcome to Hello Futter App!",
+      "Welcome TO MY First Futter App!",
       style:
           TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
     );
