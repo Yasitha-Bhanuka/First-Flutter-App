@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:helloflutter/child_one.dart';
+import 'package:helloflutter/child_second.dart';
+import 'package:helloflutter/child_third.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,15 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: "Poppins"),
       home: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            title: const Text('Hello Flutter'),
-            titleTextStyle: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.normal,
-              color: Colors.white,
-              letterSpacing: 1.2,
+            title: const Text(
+              'Hello Flutter',
+              style: TextStyle(color: Colors.white),
             ),
             backgroundColor: Colors.blue[900],
           ),
@@ -30,67 +31,13 @@ class MyApp extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.blue[100],
               ),
-              child: Column(
+              child: const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
-                      "Welcome to Hello Futter App!",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic),
-                    ),
-                    Column(
-                      children: [
-                        //Image.network("https://www.yasitha.com/flutter.png"),
-                        Image.asset(
-                          "assets/images/flutter_icon.png",
-                          height: 150,
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text("This app is developed by Yasitha!",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                    Container(
-                        padding: const EdgeInsets.all(20),
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              "assets/images/profile_icon.png",
-                              width: 50,
-                            ),
-                            SizedBox(
-                              width: 15,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Yasitha Bhanuka",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  "Flutter Developer",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                Text(
-                                  "www.yasitha.com",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ],
-                            ),
-                          ],
-                        )),
+                    ChildOne(),
+                    ChildSecond(),
+                    ChildThird(),
                   ]))),
     );
   }
