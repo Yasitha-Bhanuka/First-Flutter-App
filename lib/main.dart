@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 // CUSTOM WIDGET
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.blue[900],
           ),
           body: Container(
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               height: double.infinity,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Welcome to Hello Futter App!",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -40,7 +42,11 @@ class MyApp extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Text("Image"),
+                        //Image.network("https://www.yasitha.com/flutter.png"),
+                        Image.asset(
+                          "assets/images/flutter_icon.png",
+                          height: 150,
+                        ),
                         SizedBox(
                           height: 15,
                         ),
@@ -49,7 +55,7 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                     Container(
-                        padding: EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(20),
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.black,
@@ -57,9 +63,9 @@ class MyApp extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            Text(
-                              "Image",
-                              style: TextStyle(color: Colors.white),
+                            Image.asset(
+                              "assets/images/profile_icon.png",
+                              width: 50,
                             ),
                             SizedBox(
                               width: 15,
